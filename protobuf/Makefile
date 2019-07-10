@@ -1,6 +1,6 @@
 .PHONY: clean
 clean:
-	@rm -f proto/*.pb.go
+	@rm -f addressbook/*.pb.go
 
 .PHONY: run
 run:

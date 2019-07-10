@@ -17,7 +17,7 @@ func (c *safeCounter) increment() {
 	c.v++
 }
 
-// alias an existing type to make the code more readable
+// alias an existing type to make the variable naming more consistent
 type unsafeCounter = int
 
 var wg *sync.WaitGroup

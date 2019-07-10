@@ -1,9 +1,9 @@
 package main
 
-//go:generate protoc --go_out=. proto/addressbook.proto
+//go:generate protoc --go_out=. ./addressbook/addressbook.proto
 
 import (
-	pb "codenut.org/lab/go/examples/protobuf/proto"
+	pb "codenut.org/lab/go/examples/protobuf/addressbook"
 	"github.com/golang/protobuf/proto"
 	"log"
 )
