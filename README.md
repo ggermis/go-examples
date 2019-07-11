@@ -8,7 +8,7 @@ Every subdirectory contains a `Makefile` which implements a `run` rule to run th
 $ make run
 ```
 
-Some directories differ from the above statement. How to run the examples from those directories are described below
+Some directories differ from the above statement. How to run the examples from those directories is described below
 
 ### cross-compile
 
