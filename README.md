@@ -23,3 +23,11 @@ $ make run-server
 $ make run-client
 ```
 
+### webassembly
+
+To view the output of the main.wasm file, look at the javascript console in your browser using the inspector
+
+```
+$ make run
+$ make open
+```
