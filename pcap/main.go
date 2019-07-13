@@ -31,12 +31,14 @@ func main() {
 	// }
 
 	bpfInstructions, _ := handle.CompileBPFFilter("ip and tcp and port 80")
+	fmt.Println(bpfInstructions)
 
 	if err := handle.SetBPFInstructionFilter(bpfInstructions); err != nil {
 		panic(err)
 	}
 
 	packetSource := gopacket.NewPacketSource(handle, handle.LinkType())
+	fmt.Println("Listening for packets...")
 	for packet := range packetSource.Packets() {
 		fmt.Printf("%s", packet.Dump())
 	}
