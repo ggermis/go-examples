@@ -9,8 +9,8 @@ import (
 type person struct {
 	FirstName   string `json:"first_name"`
 	LastName    string `json:"last_name"`
-	Age         int    `json:"age"`
-	hiddenField string `json:"not_shown"`
+	Age         int    // defaults to "Age"
+	hiddenField string `json:"not_used"`
 }
 
 func main() {
@@ -27,7 +27,7 @@ func main() {
 
 	// Unmarshal JSON -> object
 	var people []person
-	j := []byte(`[{"first_name": "Jane", "last_name": "Doe", "age": 37}]`)
+	j := []byte(`[{"first_name": "Jane", "last_name": "Doe", "age": 37}]`) // notice "age" vs "Age"
 	_ = json.Unmarshal(j, &people)
 	fmt.Printf("%+v\n", people)
 
